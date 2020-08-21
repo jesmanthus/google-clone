@@ -1,0 +1,295 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+:root {
+  --colorText: hsl(0, 0%, 14%);
+  --colorTextHover: hsl(0, 0%, 45%);
+  --colorIconApps: hsl(0, 0%, 43%);
+  --colorIconAppsHover: hsl(0, 0%, 12%);
+  --colorHeaderButtonLogin: hsl(218, 93%, 62%);
+  --colorMainSearchBar: #dfe1e5;
+  --colorMainSearchIcon: hsl(210, 6%, 65%);
+  --colorMainButtonsBorder: hsl(0, 0%, 95%);
+  --colorMainButtonsBorderHover: hsl(0, 0%, 76%);
+  --colorMainTextOfferedSpan: hsl(245, 86%, 36%);
+  --colorTextFooterAddress: hsl(0, 0%, 42%);
+  --colorTextFooterMenu: hsl(213, 5%, 40%);
+  --colorBackgroundFooter: hsl(0, 0%, 95%);
+  --colorBorderFooter: hsl(0, 0%, 89%);
+  --colorWhite: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?ozpirk");
+  src: url("../fonts/icomoon.eot?ozpirk#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?ozpirk") format("truetype"),
+    url("../fonts/icomoon.woff?ozpirk") format("woff"),
+    url("../fonts/icomoon.svg?ozpirk#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+.icon-apps:before {
+  content: "\e901";
+}
+
+/* HEADER */
+.header {
+  font-size: 13px;
+  padding: 0.2em 1.6em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.menu-listItem {
+  margin: 0 0.7em;
+}
+
+.menu-link {
+  color: var(--colorText);
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  color: var(--colorTextHover);
+  text-decoration: underline;
+}
+
+.menu-appsButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.icon-apps {
+  font-size: 24px;
+  color: var(--colorIconApps);
+}
+
+.icon-apps:hover {
+  color: var(--colorIconAppsHover);
+}
+
+.menu-loginButton,
+.menu-loginLink {
+  cursor: default;
+}
+
+.menu-loginLink {
+  color: var(--colorWhite);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu-loginButton {
+  background-color: var(--colorHeaderButtonLogin);
+  border: none;
+  border-radius: 3px;
+  color: var(--colorWhite);
+  padding: 0.63em 1em;
+  outline: none;
+}
+
+/* MAIN */
+.main {
+  padding-top: 5.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.google-logo {
+  width: 272px;
+  margin-bottom: 1.7em;
+}
+
+.search-bar {
+  width: 582px;
+  height: 46px;
+  border: 1px var(--colorMainSearchBar) solid;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.8em;
+}
+
+.search-bar:hover {
+  border: none;
+  box-shadow: 0 1px 5px 2px var(--colorMainSearchBar);
+}
+
+.icon-search {
+  font-size: 19.5px;
+  color: var(--colorMainSearchIcon);
+  position: relative;
+  bottom: 1px;
+  right: 9.5px;
+}
+
+.search-input {
+  border-color: transparent;
+  outline: none;
+  width: 81%;
+  height: 34px;
+  margin-right: 22px;
+  margin-bottom: 2px;
+}
+
+.google-microphone {
+  width: 24px;
+  cursor: pointer;
+  position: relative;
+  left: 7px;
+}
+
+.main-buttonsContainer {
+  margin-bottom: 1.9em;
+}
+
+.main-buttonSearch,
+.main-buttonLuck {
+  background-color: var(--colorBackgroundFooter);
+  font-size: 14px;
+  margin: 0 0.3em;
+  padding: 0.65em 1.2em;
+  color: var(--colorTextFooterAddress);
+  border: 1px solid var(--colorMainButtonsBorder);
+  outline: none;
+  cursor: pointer;
+  border-radius: 4.2px;
+}
+
+.main-buttonSearch:hover,
+.main-buttonLuck:hover {
+  border: 1px solid var(--colorMainButtonsBorderHover);
+}
+
+.main-buttonSearch:hover,
+.main-buttonLuck:hover {
+  color: var(--colorText);
+}
+
+.main-buttonSearch:focus,
+.main-buttonLuck:focus {
+  border: 1px solid var(--colorHeaderButtonLogin);
+}
+
+.main-buttonSearch {
+  margin-left: 0;
+}
+
+.main-buttonLuck {
+  margin-right: 1em;
+}
+
+.main-linkLuck {
+  background-color: transparent;
+  color: var(--colorTextFooterAddress);
+  text-decoration: none;
+}
+
+.main-textOffered {
+  font-size: 13px;
+  color: var(--colorText);
+}
+
+.main-textOfferedSpan {
+  color: var(--colorMainTextOfferedSpan);
+  margin-left: 0.2em;
+}
+
+.main-textOfferedSpan:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-nation,
+.footer-menuContainer {
+  background-color: var(--colorBackgroundFooter);
+  padding: 11.8px 30px;
+}
+
+.footer-nation {
+  font-size: 15px;
+  color: var(--colorTextFooterAddress);
+  font-style: normal;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--colorBorderFooter);
+}
+
+.footer-menuContainer {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menuList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.footer-menuItem {
+  margin-right: 27px;
+}
+
+.footer-menuItem:last-child {
+  margin-right: 0;
+}
+
+.footer-menuLink {
+  color: var(--colorTextFooterMenu);
+  text-decoration: none;
+}
+
+.footer-menuLink:hover {
+  text-decoration: underline;
+}
