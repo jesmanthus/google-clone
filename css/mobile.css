@@ -53,6 +53,15 @@ ul, ol {
   content: "\e901";
 }
 
+
+/* Desktop elements */
+.navbar__desktop,
+.google-camara,
+.main-buttonsContainer,
+.footer__menuContainer-Desktop {
+  display: none;
+}
+
 /* HEADER */
 .header__navbar .navbar__mobile {
   display: flex;
@@ -110,6 +119,12 @@ ul, ol {
   padding: 12px;
   color: #5f6368;
 }
+
+.navbar__mobile-right .material-symbols-sharp:hover {
+  border-radius: 50%;
+  background-color: rgba(60,64,67,.1);
+}
+
 
 .navbar__mobile-right a {
   margin: 0 8px;
@@ -227,54 +242,9 @@ ul, ol {
 
 .google-microphone {
   width: 24px;
-  cursor: pointer;
+  height: 24px;
   margin: 0 12px;
-}
-
-.main-buttonsContainer {
-  margin-bottom: 1.9em;
-}
-
-.main-buttonSearch,
-.main-buttonLuck {
-  background-color: var(--colorBackgroundFooter);
-  font-size: 14px;
-  margin: 0 0.3em;
-  padding: 0.65em 1.2em;
-  color: var(--colorTextFooterAddress);
-  border: 1px solid var(--colorMainButtonsBorder);
-  outline: none;
   cursor: pointer;
-  border-radius: 4.2px;
-}
-
-.main-buttonSearch:hover,
-.main-buttonLuck:hover {
-  border: 1px solid var(--colorMainButtonsBorderHover);
-}
-
-.main-buttonSearch:hover,
-.main-buttonLuck:hover {
-  color: var(--colorText);
-}
-
-.main-buttonSearch:focus,
-.main-buttonLuck:focus {
-  border: 1px solid var(--colorHeaderButtonLogin);
-}
-
-.main-buttonSearch {
-  margin-left: 0;
-}
-
-.main-buttonLuck {
-  margin-right: 1em;
-}
-
-.main-linkLuck {
-  background-color: transparent;
-  color: var(--colorTextFooterAddress);
-  text-decoration: none;
 }
 
 .main-textOffered {

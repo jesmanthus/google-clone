@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google</title>
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px)">
+  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1024px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -20,7 +22,9 @@
 <body>
 
   <header class="header">
+
     <nav class="header__navbar">
+
       <ul class="navbar__mobile">
         <div class="navbar__mobile-left">
           <li class="navbar__item"><span class="material-symbols-outlined">menu</span></li>
@@ -34,26 +38,18 @@
           <li class="navbar__item"><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign in</a></li>
         </div>
       </ul>
-    </nav>
-    <!-- <nav class="menu">
-      <span class="material-symbols-outlined">menu</span>
-      <ul class="menu-list">
-        <li class="menu-listItem">
-          <a class="menu-link" href="https://mail.google.com/">Gmail</a>
-        </li>
-        <li class="menu-listItem">
-          <a class="menu-link" href="https://www.google.com.ni/">Imágenes</a>
-        </li>
-        <li class="menu-listItem">
-          <button class="menu-appsButton"><i class="icon-apps"></i></button>
-        </li>
-        <li class="menu-listItem">
-          <a class="menu-loginLink" href="https:accounts.google.com/">
-            <button class="menu-loginButton">Iniciar sesión</button>
-          </a>
-        </li>
+
+      <ul class="navbar__desktop">
+        <div class="navbar__desktop-left">
+          <li class="navbar__item"><a href="https://www.google.com/webhp?output=search&tbm=isch&tbo=u&sa=X&ved=0ahUKEwjmw4Dv_p77AhWERTABHbwNDC4Q0tQDCBAoAQ">Gmail</a></li>
+          <li class="navbar__item"><a href="https://www.google.com/webhp?output=search&tbm=isch&tbo=u&sa=X&ved=0ahUKEwjmw4Dv_p77AhWERTABHbwNDC4Q0tQDCBAoAQ">Images</a></li>
+        </div>
+        <div class="navbar__desktop-right">
+          <li class="navbar__item"><span class="material-symbols-sharp">apps</span></li>
+          <li class="navbar__item"><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ">Sign in</a></li>
+        </div>
       </ul>
-    </nav> -->
+    </nav>
   </header>
 
   <main class="main">
@@ -64,68 +60,55 @@
       <i class="icon-search"></i>
       <input class="search-input" type="search">
       <img class="google-microphone" src="./images/google_microphone.png" alt="">
+      <img class="google-camara" src="./images/google_camara.svg" alt="">
     </div>
 
-    <!-- <div class="main-buttonsContainer">
-      <button class="main-buttonSearch">Buscar con Google</button>
-      <a class="main-linkLuck" href="https://www.google.com/doodles/">
-        <button class="main-buttonLuck">
-          Me siento con suerte
-        </button>
-      </a>
-    </div> -->
-    <div class="main-textOffered">Google offered in:<a href="https://www.google.com/setprefs?sig=0_emEguND-0N3WranQ0XtEhuTXh8g%3D&hl=es-419&source=homepage&sa=X&ved=0ahUKEwi53vil06P7AhU6SDABHehGDUkQ2ZgBCBk" class="main-textOfferedSpan">Español (Latinoamérica)</a>
+    <div class="main-buttonsContainer">
+      <input class="main-buttonSearch" value="Google Search" type="button">
+      <input class="main-linkLuck" href="https://www.google.com/doodles/" value="I'm Feeling Lucky" type="button">
+    </div>
+    
+    <div class="main-textOffered">Google offered in: <a href="https://www.google.com/setprefs?sig=0_emEguND-0N3WranQ0XtEhuTXh8g%3D&hl=es-419&source=homepage&sa=X&ved=0ahUKEwi53vil06P7AhU6SDABHehGDUkQ2ZgBCBk" class="main-textOfferedSpan">Español (Latinoamérica)</a>
     </div>
   </main>
 
   <footer class="footer">
     <address class="footer-nation">Nicaragua</address>
+
     <div class="footer__menuContainer-midSection"></div>
+    
     <div class="footer__menuContainer-mobile">
       <nav class="footer__menu">
         <ul class="footer__menuList">
-          <li><a href="">Dark theme: off</a></li>
-          <li><a href="">Settings</a></li>
-          <li><a href="">Privacy</a></li>
-          <li><a href="">Terms</a></li>
+          <li><a href="#">Dark theme: off</a></li>
+          <li><a href="https://www.google.com/preferences?hl=en">Settings</a></li>
+          <li><a href="https://policies.google.com/privacy?hl=en-NI&fg=1">Privacy</a></li>
+          <li><a href="https://policies.google.com/terms?hl=en-NI&fg=1">Terms</a></li>
         </ul>
       </nav>
       <nav class="footer__menu">
         <ul class="footer__menuList">
-          <li><a href="">Advertising</a></li>
-          <li><a href="">Business</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="https://www.google.com/intl/en_ni/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+          <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
+          <li><a href="https://about.google/?utm_source=google-NI&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a></li>
         </ul>
       </nav>
-      <!-- <nav class="footer-menu">
-        <ul class="footer-menuList">
-          <li class="footer-menuItem">
-            <a class="footer-menuLink" href="https://ads.google.com/">Publicidad</a>
-          </li>
-          <li class="footer-menuItem">
-            <a class="footer-menuLink" href="https://smallbusiness.withgoogle.com/">Negocios</a>
-          </li>
-          <li class="footer-menuItem">
-            <a class="footer-menuLink" href="https://about.google/">Sobre Google</a>
-          </li>
-          <li class="footer-menuItem">
-            <a class="footer-menuLink" href="https://www.google.com/search/howsearchworks/">Cómo funciona la Búsqueda</a>
-          </li>
+    </div>
+
+    <div class="footer__menuContainer-Desktop">
+      <nav class="footer__menu">
+        <ul class="footer__menuList-left">
+          <li><a href="https://about.google/?utm_source=google-NI&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a></li>
+          <li><a href="https://www.google.com/intl/en_ni/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+          <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
+          <li><a href="https://google.com/search/howsearchworks/?fg=1"> How Search works </a></li>
+        </ul>
+        <ul class="footer__menuList-right">
+          <li><a href="https://policies.google.com/privacy?hl=en-NI&fg=1">Privacy</a></li>
+          <li><a href="https://policies.google.com/terms?hl=en-NI&fg=1">Terms</a></li>
+          <li><a href="#">Settings</a></li>
         </ul>
       </nav>
-      <nav class="footer-menu">
-        <ul class="footer-menuList">
-          <li class="footer-menuItem">
-            <a class="footer-menuLink" href="https://policies.google.com/">Privacidad</a>
-          </li>
-          <li class="footer-menuItem">
-            <a class="footer-menuLink" href="https://policies.google.com/">Condiciones</a>
-          </li>
-          <li class="footer-menuItem">
-            <a class="footer-menuLink" href="">Preferencias</a>
-          </li>
-        </ul>
-      </nav> -->
     </div>
   </footer>
   
