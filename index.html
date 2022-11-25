@@ -26,8 +26,29 @@
     <nav class="header__navbar">
 
       <ul class="navbar__mobile">
+
+        <div id="dropdownMenuContainer">
+          <div id="dropdownMenu">
+            <nav class="dropdownMenu__nav">
+              <a id="dropdownMenu__google" href="#" class="dropdownMenu__link"></a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/home_icon.svg" alt=""> Home</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/search_activity_icon.svg" alt=""> Search history</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/save_icon.svg" alt=""> Collections</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/manage_searches_icon.svg" alt=""> Offline searches</a>
+              <div class="dropdownMenu__nav-line"></div>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/settings_icon.svg" alt="">Settings</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/privacy_advisor_icon.svg" alt=""> Your data in Search</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/explicit_icon.svg" alt=""> Hide explicit results: off</a>
+              <a href="" class="dropdownMenu__link"><span class="material-symbols-outlined">light_mode</span> Dark theme: off</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/how_search_works_icon.svg" alt=""> How Search works</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/help_icon.svg" alt=""> Help</a>
+              <a href="" class="dropdownMenu__link"><img src="./assets/icons/feedback_icon.svg" alt=""> Send feedback</a>
+            </nav>
+          </div>
+        </div>
+
         <div class="navbar__mobile-left">
-          <li class="navbar__item"><span class="material-symbols-outlined">menu</span></li>
+          <li id="burgerButton" class="navbar__item"><span class="material-symbols-outlined">menu</span></li>
           <div class="navbar__mobile-links">
             <li class="navbar__item active"><a href="./index.html">All</a></li>
             <li class="navbar__item"><a href="https://www.google.com/webhp?output=search&tbm=isch&tbo=u&sa=X&ved=0ahUKEwjmw4Dv_p77AhWERTABHbwNDC4Q0tQDCBAoAQ">Images</a></li>
@@ -54,13 +75,13 @@
 
   <main class="main">
 
-    <img class="main__logo" src="./images/google_logo.png" alt="">
+    <img class="main__logo" src="./assets/img/google_logo.png" alt="">
 
     <div class="main__search-container">
       <i class="icon-search"></i>
       <input class="search-input" type="search">
-      <img class="google-microphone" src="./images/google_microphone.png" alt="">
-      <img class="google-camara" src="./images/google_camara.svg" alt="">
+      <img class="google-microphone" src="./assets/img/google_microphone.png" alt="">
+      <img class="google-camara" src="./assets/icons/google_camara.svg" alt="">
     </div>
 
     <div class="main-buttonsContainer">
@@ -111,7 +132,7 @@
       </nav>
     </div>
   </footer>
-  
+  <script src="./main.js"></script>
 </body>
 
 </html>

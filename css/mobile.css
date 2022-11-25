@@ -15,6 +15,10 @@ body {
   min-height: 100vh;
 }
 
+body.dropdownMenu__active {
+  filter: rgba(0, 0, 0, 0.6);
+}
+
 ul, ol {
   list-style: none;
 }
@@ -63,6 +67,77 @@ ul, ol {
 }
 
 /* HEADER */
+#burgerButton {
+  cursor: pointer;
+}
+
+#dropdownMenuContainer {
+  position: fixed;
+  z-index: 199;
+}
+
+#dropdownMenuContainer.active {
+  width: 100vw;
+  height: 100vh;
+  background-color:rgba(0, 0, 0, 0.6);
+}
+
+#dropdownMenu {
+  width: 250px;
+  height: 100%;
+  padding-top: 15px;
+  position: fixed;
+  left: -250px;
+  overflow-y: scroll;
+  z-index: 200;
+  background-color: #fff;
+  transition: .5s;
+}
+
+#dropdownMenu.active {
+  left: 0;
+}
+
+#dropdownMenu a:first-child {
+  box-sizing: content-box;
+  display: block;
+  width: 92px;
+  height: 36px;
+  margin-left: 15px;
+  padding-bottom: 8px;
+  background-image: url('/assets/img/google_logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 200;
+}
+
+.dropdownMenu__nav-line {
+  margin: 5px 0;
+  height: 1px;
+  background-color: #dadce0;
+}
+
+
+#dropdownMenu a {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  line-height: 20px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: rgba(0,0,0,.54);
+}
+
+#dropdownMenu img {
+  margin-bottom: 3px;
+  padding: 0 15px;
+}
+
+#dropdownMenu span {
+  margin-bottom: 3px;
+  padding: 0 15px;
+}
+
 .header__navbar .navbar__mobile {
   display: flex;
   justify-content: space-between;
@@ -115,8 +190,12 @@ ul, ol {
   padding-right: 4px;
 }
 
+.navbar__mobile-right li:first-child {
+  padding: 4px;
+}
+
 .navbar__mobile-right .material-symbols-sharp {
-  padding: 12px;
+  padding: 8px;
   color: #5f6368;
 }
 
