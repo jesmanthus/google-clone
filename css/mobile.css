@@ -105,7 +105,7 @@ ul, ol {
   height: 36px;
   margin-left: 15px;
   padding-bottom: 8px;
-  background-image: url('/assets/img/google_logo.png');
+  background-image: url('../assets/img/google_logo.png');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 200;
@@ -295,20 +295,24 @@ ul, ol {
   margin: 8px;
   border: 1px solid #dadce0;
   border-radius: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
-.search-bar:hover {
-  border: none;
-  box-shadow: 0 1px 5px 2px var(--colorMainSearchBar);
+.main__search-content {
+  display: flex;
+  align-items: center;
 }
 
 .icon-search {
   padding-left: 8px;
   font-size: 2.4rem;
   color: #9aa0a6;
+}
+
+.main__search-container .material-symbols-outlined {
+  display: none;
+  color: #1a73e8;
+  cursor: pointer;
 }
 
 .search-input {
@@ -323,6 +327,64 @@ ul, ol {
   width: 24px;
   height: 24px;
   margin: 0 12px;
+  cursor: pointer;
+}
+
+
+.main__search-container.active {
+  max-width: initial;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  z-index: 989;
+  background-color: #fff;
+}
+
+.main__search-container.active .main__search-content {
+  border-bottom: 1px solid #dadce0;
+  margin: 0 6px 0 10px;
+} 
+
+.main__search-container.active .icon-search {
+  display: none;
+}
+
+.main__search-container.active .material-symbols-outlined {
+  display: initial;
+  margin: 0 3px 0 7px;
+  padding: 0 12px 0 0;
+}
+
+.main__search-container.active .search-input {
+  padding: 12px 2px 12px 3px;
+  line-height: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.main__search-container.active .google-microphone {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.main__search-container.active .google-microphone.active {
+  display: none;
+}
+
+.main__search-container.active .google-microphone.active ~ #clearSearchButton {
+  display: inherit;
+}
+
+.main__search-container.active #clearSearchButton {
+  display: none;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0 12px;
+  color: #70757a;
   cursor: pointer;
 }
 
@@ -420,3 +482,7 @@ ul, ol {
 .footer-menuLink:hover {
   text-decoration: underline;
 }
+
+
+
+
