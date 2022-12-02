@@ -5,3 +5,12 @@
 .main__search-container {
   margin: 8px auto;
 }
+
+body.dark .main__search-container {
+  margin: 26px auto 8px auto;
+  max-width: 720px;
+}
+
+body.dark .main__search-container.active {
+  max-width: unset;
+}

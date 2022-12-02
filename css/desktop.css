@@ -194,3 +194,55 @@
   display: flex;
 }
 
+
+/* DARK MODO */
+body.dark .navbar__desktop-left a {
+  color: #fff;
+}
+
+body.dark .navbar__desktop-right .material-symbols-sharp {
+  color: rgba(255,255,255,0.87);
+}
+
+body.dark .navbar__desktop-right a {
+  background-color: #8ab4f8;
+  color: #202124;
+}
+
+body.dark .main__logo {
+  content: url('../assets/img/googlelogo_light_color_desktop.png');
+}
+
+body.dark .main__search-container {
+  max-width: 584px;
+}
+
+body.dark .main__search-container:hover {
+  background-color: #303134;
+  box-shadow: 0 1px 6px 0 #171717;
+  border-color: rgba(223,225,229,0);
+}
+
+body.dark .search-input:hover {
+  background-color: #303134;
+}
+
+
+body.dark .main-buttonSearch,
+body.dark .main-linkLuck {
+  background-color: #303134;
+  border-color: #303134;
+  color: #e8eaed;
+}
+
+body.dark .main-buttonSearch:hover,
+body.dark .main-linkLuck:hover {
+  box-shadow: 0 1px 3px rgb(23 23 23 / 24%);
+  background-color: #303134;
+  border: 1px solid #5f6368;
+  color: #e8eaed;
+}
+
+body.dark .navbar__desktop-right .material-symbols-sharp:hover {
+  background-color:  rgba(232,234,237,.08);
+}
