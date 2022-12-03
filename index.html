@@ -31,7 +31,7 @@
           <div id="dropdownMenu">
             <nav class="dropdownMenu__nav">
               <a id="dropdownMenu__google" href="#" class="dropdownMenu__link"></a>
-              <a href="./index.html" class="dropdownMenu__link"><img src="./assets/icons/home_icon.svg" alt=""> Home</a>
+              <a href="./" class="dropdownMenu__link"><img src="./assets/icons/home_icon.svg" alt=""> Home</a>
               <a href="https://www.google.com/history/optout?hl=es-419&sa=X&ved=0ahUKEwjTrI-5sdv7AhUoQjABHUSUANAQsLsECAU" class="dropdownMenu__link"><img src="./assets/icons/search_activity_icon.svg" alt=""> Search history</a>
               <a href="https://www.google.com/save?hl=es-419" class="dropdownMenu__link"><img src="./assets/icons/save_icon.svg" alt=""> Collections</a>
               <a href="https://www.google.com/search/managesearches?sa=X&ved=0ahUKEwjAxIXxsdv7AhWStDEKHYaFDMQQ34oDCAc" class="dropdownMenu__link"><img src="./assets/icons/manage_searches_icon.svg" alt=""> Offline searches</a>
@@ -39,10 +39,10 @@
               <a href="https://www.google.com/preferences?hl=es-419&prev=https://www.google.com/&sa=X&ved=0ahUKEwiNyO7mstv7AhWMTTABHV-UDskQn5cCCAg" class="dropdownMenu__link"><img src="./assets/icons/settings_icon.svg" alt="">Settings</a>
               <a href="https://myaccount.google.com/intro/yourdata/search?utm_source=googlemenu&cctld=com&sa=X&ved=0ahUKEwiNyO7mstv7AhWMTTABHV-UDskQp9gDCAk" class="dropdownMenu__link"><img src="./assets/icons/privacy_advisor_icon.svg" alt=""> Your data in Search</a>
               <a href="https://www.google.com/safesearch?hl=es-419&prev=https://www.google.com/&sa=X&ved=0ahUKEwiNyO7mstv7AhWMTTABHV-UDskQkqkxCAo" class="dropdownMenu__link"><img src="./assets/icons/explicit_icon.svg" alt=""> Hide explicit results: off</a>
-              <a id="dropdownMenuSwitch" class="dropdownMenu__link"><span class="material-symbols-outlined">light_mode</span> Dark theme: off</a>
+              <a id="dropdownMenuSwitch" class="dropdownMenu__link"></a>
               <a href="https://www.google.com/search/howsearchworks/" class="dropdownMenu__link"><img src="./assets/icons/how_search_works_icon.svg" alt=""> How Search works</a>
               <a href="https://support.google.com/websearch/?visit_id=638055970633942071-784087300&hl=en-NI&rd=2#topic=3378866" class="dropdownMenu__link"><img src="./assets/icons/help_icon.svg" alt=""> Help</a>
-              <a href="./index.html" class="dropdownMenu__link"><img src="./assets/icons/feedback_icon.svg" alt=""> Send feedback</a>
+              <a href="./" class="dropdownMenu__link"><img src="./assets/icons/feedback_icon.svg" alt=""> Send feedback</a>
             </nav>
           </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="navbar__mobile-left">
           <li id="burgerButton" class="navbar__item"><span class="material-symbols-outlined">menu</span></li>
           <div class="navbar__mobile-links">
-            <li class="navbar__item active"><a href="./index.html">All</a></li>
+            <li class="navbar__item active"><a href="./">All</a></li>
             <li class="navbar__item"><a href="https://www.google.com/webhp?output=search&tbm=isch&tbo=u&sa=X&ved=0ahUKEwjmw4Dv_p77AhWERTABHbwNDC4Q0tQDCBAoAQ">Images</a></li>
           </div>
         </div>
@@ -106,7 +106,7 @@
     <div class="footer__menuContainer-mobile">
       <nav class="footer__menu">
         <ul class="footer__menuList">
-          <li><a id="footerSwitch" href="#">Dark theme: off</a></li>
+          <li><a id="footerSwitch" href="#"></a></li>
           <li><a href="https://www.google.com/preferences?hl=en">Settings</a></li>
           <li><a href="https://policies.google.com/privacy?hl=en-NI&fg=1">Privacy</a></li>
           <li><a href="https://policies.google.com/terms?hl=en-NI&fg=1">Terms</a></li>
@@ -132,7 +132,20 @@
         <ul class="footer__menuList-right">
           <li><a href="https://policies.google.com/privacy?hl=en-NI&fg=1">Privacy</a></li>
           <li><a href="https://policies.google.com/terms?hl=en-NI&fg=1">Terms</a></li>
-          <li><a href="#">Settings</a></li>
+          <li><a id="footerSettingsButton" href="#">Settings</a></li>
+
+          <nav id="footerSettings">
+            <ul>
+              <li><a href="">Search settings</a></li>
+              <li><a href="">Advanced search</a></li>
+              <li><a href="">Your data in Search</a></li>
+              <li><a href="">Search history</a></li>
+              <li><a href="">Search help</a></li>
+              <li><a href="">Send feedback</a></li>
+              <li class="footerSettingsLine"></li>
+              <li><a id="footerSettingsSwitch"></a></li>
+            </ul>
+          </nav>
         </ul>
       </nav>
     </div>

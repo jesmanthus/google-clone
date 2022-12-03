@@ -7,9 +7,26 @@ const searchContainer = document.querySelector('.main__search-container')
 const arrowBackButton = document.querySelector('#arrowBackButton');
 const clearSearchButton = document.querySelector('#clearSearchButton');
 const dropdownMenuSwitch = document.querySelector('#dropdownMenuSwitch');
-const footerSwitch = document.querySelector('#footerSwitch')
+const footerSwitch = document.querySelector('#footerSwitch');
+const footerSettingsButton = document.querySelector('#footerSettingsButton');
+const footerSettings = document.querySelector('#footerSettings');
+const footerSettingsSwitch = document.querySelector('#footerSettingsSwitch');
+
+if(localStorage.getItem('dark-mode') === 'true') {
+  document.body.classList.add('dark');
+  footerSwitch.innerText = 'Dark theme: on';
+  dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">dark_mode</span> Dark theme: on'
+  footerSettingsSwitch.innerText = 'Dark theme: On';
+} else {
+  document.body.classList.remove('dark');
+  footerSwitch.innerText = 'Dark theme: off';
+  dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">light_mode</span> Dark theme: off'
+  footerSettingsSwitch.innerText = 'Dark theme: Off';
+}
 
 dropdownMenuMobile.addEventListener('click', (e) => e.stopPropagation())
+footerSettingsButton.addEventListener('click',(e) => e.stopPropagation())
+document.body.addEventListener('click', () => footerSettings.classList.remove('active'))
 
 burgerButton.addEventListener('click', () => {
   dropdownMenuMobile.classList.add('active');
@@ -58,9 +75,13 @@ dropdownMenuSwitch.addEventListener('click', () => {
 
   if(document.body.classList.contains('dark')) {
     dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">dark_mode</span> Dark theme: on'
+    footerSwitch.innerText = 'Dark theme: on';
+    footerSettingsSwitch.innerText = 'Dark theme: on';
     localStorage.setItem('dark-mode', 'true')
   } else {
     dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">light_mode</span> Dark theme: off'
+    footerSwitch.innerText = 'Dark theme: off';
+    footerSettingsSwitch.innerText = 'Dark theme: off';
     localStorage.setItem('dark-mode', 'false')
   }
 })
@@ -70,22 +91,40 @@ footerSwitch.addEventListener('click', () => {
 
   if(document.body.classList.contains('dark')) {
     footerSwitch.innerText = 'Dark theme: on';
+    dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">dark_mode</span> Dark theme: on'
+    footerSettingsSwitch.innerText = 'Dark theme: on';
     localStorage.setItem('dark-mode', 'true')
   } else {
     footerSwitch.innerText = 'Dark theme: off';
+    dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">light_mode</span> Dark theme: off';
+    footerSettingsSwitch.innerText = 'Dark theme: off';
+    localStorage.setItem('dark-mode', 'false')
+  }
+})
+
+footerSettingsButton.addEventListener('click', () => {
+  footerSettings.classList.toggle('active')
+})
+
+footerSettingsSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark')
+
+  if(document.body.classList.contains('dark')) {
+    footerSettingsSwitch.innerText = 'Dark theme: On';
+    footerSwitch.innerText = 'Dark theme: on';
+    dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">dark_mode</span> Dark theme: on'
+    footerSettings.classList.remove('active')
+    localStorage.setItem('dark-mode', 'true')
+  } else {
+    footerSettingsSwitch.innerText = 'Dark theme: Off';
+    footerSwitch.innerText = 'Dark theme: off';
+    dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">light_mode</span> Dark theme: off'
+    footerSettings.classList.remove('active')
     localStorage.setItem('dark-mode', 'false')
   }
 })
 
 
-if(localStorage.getItem('dark-mode') === 'true') {
-  document.body.classList.add('dark');
-  footerSwitch.innerText = 'Dark theme: on';
-  dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">dark_mode</span> Dark theme: on'
-} else {
-  document.body.classList.remove('dark');
-  footerSwitch.innerText = 'Dark theme: off';
-  dropdownMenuSwitch.innerHTML = '<span class="material-symbols-outlined">light_mode</span> Dark theme: off'
-}
+
 
 

@@ -194,6 +194,56 @@
   display: flex;
 }
 
+#footerSettings {
+  padding: 5px 0;
+  position: absolute;
+  right: 19px;
+  bottom: 46px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
+  background-color: #fff;
+}
+
+#footerSettings li {
+  padding: 0;
+}
+
+#footerSettings li:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+#footerSettings a {
+  display: inline-block;
+  width: 100%;
+  padding: 4px 16px;
+  line-height: 2.3rem;
+  text-decoration: none;
+  color: #202124;
+}
+
+#footerSettings li:nth-child(6) a {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#footerSettings li:last-child a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+#footerSettings .footerSettingsLine {
+  height: .5px;
+  margin: 5px 0;
+  padding: 0;
+  background-color: rgb(218, 220, 224);
+}
+
+
+#footerSettings.active {
+  display: block;
+}
+
 
 /* DARK MODO */
 body.dark .navbar__desktop-left a {
@@ -245,4 +295,22 @@ body.dark .main-linkLuck:hover {
 
 body.dark .navbar__desktop-right .material-symbols-sharp:hover {
   background-color:  rgba(232,234,237,.08);
+}
+
+body.dark #footerSettings {
+  background-color: #202124;
+  box-shadow: 1px 1px 15px 0px #171717;
+}
+
+body.dark #footerSettings a {
+  color: #bdc1c6;
+}
+
+body.dark #footerSettings li:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+
+body.dark #footerSettings .footerSettingsLine {
+  background-color: #3c4043;
 }

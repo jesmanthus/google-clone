@@ -71,7 +71,8 @@ ul, ol {
 .navbar__desktop,
 .google-camara,
 .main-buttonsContainer,
-.footer__menuContainer-Desktop {
+.footer__menuContainer-Desktop,
+#footerSettings {
   display: none;
 }
 
