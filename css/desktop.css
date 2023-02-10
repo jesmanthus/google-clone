@@ -113,6 +113,7 @@
 .google-camara {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 /* */
@@ -259,6 +260,10 @@ body.dark .navbar__desktop-right a {
   color: #202124;
 }
 
+body.dark .navbar__desktop-right a:hover {
+  background-color: #93baf9;
+}
+
 body.dark .main__logo {
   content: url('../assets/img/googlelogo_light_color_desktop.png');
 }
@@ -273,7 +278,8 @@ body.dark .main__search-container:hover {
   border-color: rgba(223,225,229,0);
 }
 
-body.dark .search-input:hover {
+body.dark .search-input:hover,
+body.dark .main__search-container:hover .search-input {
   background-color: #303134;
 }
 
